@@ -31,9 +31,9 @@ instance Eq Date where
     && dm1 == dm2
 
 data Identity a =
-  Identity a
+  Identity a deriving Show
 
 data NoEq = NoEqInst deriving Show
 
-instance Eq (Identity a) where
+instance Eq a => Eq (Identity a) where
   (==) (Identity v) (Identity v') = v == v'
