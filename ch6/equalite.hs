@@ -23,9 +23,17 @@ instance Eq DayOfWeek where
 
 -- day of week and numerical day of month
 data Date =
-  Date DayOfWeek Int deriving Show
+  DateInst DayOfWeek Int deriving Show
 
 instance Eq Date where
-  (==) (Date dw1 dm1) (Date dw2 dm2) =
+  (==) (DateInst dw1 dm1) (DateInst dw2 dm2) =
     dw1 == dw2 
     && dm1 == dm2
+
+data Identity a =
+  Identity a
+
+data NoEq = NoEqInst deriving Show
+
+instance Eq (Identity a) where
+  (==) (Identity v) (Identity v') = v == v'
