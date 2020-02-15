@@ -9,6 +9,7 @@ instance Eq Sausage where
 
 data DayOfWeek =
   Mon | Tue | Wed | Thu | Fri | Sat | Sun
+  deriving Show
 
 instance Eq DayOfWeek where
   (==) Mon Mon = True
@@ -22,7 +23,7 @@ instance Eq DayOfWeek where
 
 -- day of week and numerical day of month
 data Date =
-  Date DayOfWeek Int
+  Date DayOfWeek Int deriving Show
 
 instance Eq Date where
   (==) (Date dw1 dm1) (Date dw2 dm2) =
