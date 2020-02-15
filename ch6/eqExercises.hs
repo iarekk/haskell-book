@@ -1,17 +1,17 @@
 module EqExercises where
 
 data TisAnInteger =
-  TisAn Integer
+  TisAn Integer deriving Show
 
 data TwoIntegers =
-  Two Integer Integer
+  Two Integer Integer deriving Show
 
-data StringOrInt = TisAnInt Int | TisAString String
+data StringOrInt = TisAnInt Int | TisAString String deriving Show
 
-data Pair a = Pair a a
+data Pair a = Pair a a deriving Show
 
-data Tuple a b = Tuple a b
+data Tuple a b = Tuple a b deriving Show
 
-data Which a = ThisOne a | ThatOne a
+data Which a = ThisOne a | ThatOne a deriving Show
 
-data EitherOr a b = Hello a | Goodbye b
+data EitherOr a b = Hello a | Goodbye b deriving Show
