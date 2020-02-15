@@ -22,4 +22,6 @@ instance Enum DayOfWeek where
   fromEnum Sat = 5
   fromEnum Sun = 6
 
-  
+repeatso f x n
+  | n > 0 = repeatso f (f x) (n-1)
+  | otherwise = x
